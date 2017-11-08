@@ -82,13 +82,14 @@ public class Main {
 
         if (bugs.containsKey(id)) {
             List<String> bugsNames = bugs.get(id).getName();
+            List<Maintainer> maintainersFinal = new ArrayList<>();
 
             for (Maintainer m : maintainers) {
-                if (!m.equals(bugsNames)) {
-                    maintainers.remove(m);
+                if (m.equals(bugsNames)) {
+                    maintainersFinal.add(m);
                 }
             }
-            if (!maintainers.isEmpty()) {
+            if (!maintainersFinal.isEmpty()) {
                 String[] data = getNamesAndEmails(maintainers);
 
                 try {
