@@ -1,5 +1,7 @@
 package practica1.Entities;
 
+import java.util.List;
+
 public class Maintainer {
 
     private String packageName;
@@ -7,6 +9,14 @@ public class Maintainer {
     private String email;
 
     public Maintainer() {}
+
+    public Maintainer(String[] separar) {
+        if(separar.length == 3){
+            this.packageName = separar[0];
+            this.name = separar[1];
+            this.email = separar[2];
+        }
+    }
 
     public Maintainer(String packageName, String name, String email) {
         this.packageName = packageName;
@@ -37,4 +47,18 @@ public class Maintainer {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public boolean equals(List<String> s){
+        final boolean[] check = {false};
+        s.forEach(s1 -> {
+            if (this.name.contains(s1)){
+                check[0] = true;
+            }
+        });
+        return check[0];
+    }
+
+    /*public boolean containsName(final List<Maintainer> list, final String name){
+        return list.stream().filter(o -> o.getName().contains(name)).findFirst().isPresent();
+    }*/
 }
