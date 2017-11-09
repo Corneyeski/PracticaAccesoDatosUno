@@ -1,0 +1,7 @@
+- Las clases tienen un constructor para recibir y asignar los valores
+
+- Si falla alguna linea al leer el archivo, indicara que ha habido un fallo
+ pero pasara a leer la siguiente
+
+- He puesto un menu para que puedas probar diferentes ID's o errores,
+ sin tener que ejecutar cada vez el codigo

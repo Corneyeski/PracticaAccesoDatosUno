@@ -49,10 +49,10 @@ public class Maintainer {
     }
 
     public boolean equals(List<String> s){
-        final boolean[] check = {false};
+        final Boolean[] check = {false};
         s.forEach(s1 -> {
-            System.out.println(s1 + " " + this.getName());
-            if (this.name != null && s1.contains(this.name)){
+            //System.out.println(s1 + " " + this.getName());
+            if (this.packageName != null && s1.contains(this.packageName)){
                 check[0] = true;
             }
         });

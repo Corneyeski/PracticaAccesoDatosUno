@@ -20,6 +20,10 @@ public class Main {
 
         String linea;
         String menu;
+
+        /**
+         * Lectura de los archivos
+         */
         try {
             BufferedReader bfr = new BufferedReader(new FileReader(bugPackage));
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -42,6 +46,9 @@ public class Main {
                 }
             }
 
+            /**
+             * Menu para testear comodamente en terminal
+             */
             do {
                 System.out.println("MENU PRINCIPAL DE LA PRACTICA");
                 System.out.println("1 - Empezar ejercicio");
@@ -80,6 +87,9 @@ public class Main {
 
     private static void mailWrite(Long id) {
 
+        /**
+         * Comprobacion de datos y generacion de email
+         */
         if (bugs.containsKey(id)) {
             List<String> bugsNames = bugs.get(id).getName();
             List<Maintainer> maintainersFinal = new ArrayList<>();
@@ -90,7 +100,7 @@ public class Main {
                 }
             }
             if (!maintainersFinal.isEmpty()) {
-                String[] data = getNamesAndEmails(maintainers);
+                String[] data = getNamesAndEmails(maintainersFinal);
 
                 try {
                     Writer writer = new BufferedWriter(
@@ -134,6 +144,9 @@ public class Main {
 
     private static String[] getNamesAndEmails(List<Maintainer> maintainers) {
 
+        /**
+         * obtenemos datos para rellenar el email
+         */
         String[] data = new String[2];
 
         for (Maintainer m :

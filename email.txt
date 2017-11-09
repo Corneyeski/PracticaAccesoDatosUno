@@ -1,0 +1,13 @@
+From: owner@bugs.debian.org
+
+To: nullansgar@debian.org dottedmag@debian.org evo@debian.org 
+
+Dear: nullAnsgar Burchardt Mikhail Gusarov Davide Puricelli (evo) 
+
+You have a new bug: 
+
+[xchat] - RC bug number #147832
+
+Please, fix it as soon as possible.
+
+Cheers.
